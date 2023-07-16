@@ -3,7 +3,7 @@ This are some walkthrogh of CTF machines that i solved and are available on the 
 
 # CTF Machine Walkthroughs
 
-![CTF Logo](ctf_logo.png)
+![CTF Logo](https://miro.medium.com/v2/resize:fit:720/format:webp/1*V1Z3dmLlOY6A4aNPCTIWxQ.png)
 
 This repository contains walkthroughs for various Capture The Flag (CTF) machines that I have solved. The walkthroughs are meant to provide detailed explanations of the steps and techniques used to solve each machine. The goal is to help others learn and improve their skills in penetration testing and ethical hacking.
 
