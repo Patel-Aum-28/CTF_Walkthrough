@@ -29,6 +29,6 @@ Below is a list of the CTF machines that are covered in this repository:
 
 ### BASIC PENTESTING: 1
 
-- [Walkthrough](machine1/basic_pentesting_1.md)
+- [Walkthrough](Basic_pentesting_1/Basic_pentesting_1.md)
 
 
