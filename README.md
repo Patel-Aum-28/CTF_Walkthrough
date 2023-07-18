@@ -22,11 +22,16 @@ This repository serves as a collection of CTF machine walkthroughs that I have w
 Below is a list of the CTF machines that are covered in this repository:
 
 - BASIC PENTESTING: 1
+- Kira: CTF
 
 ## Walkthroughs
 
 ### BASIC PENTESTING: 1
 
 - [Walkthrough](Basic_pentesting_1/Basic_pentesting_1.md)
+
+### Kira: CTF
+
+- [Walkthrough](Kira_CTF/readme.md)
 
 
