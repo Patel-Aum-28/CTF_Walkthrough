@@ -10,7 +10,7 @@ This is a Kira CTF that is also easy to enumerate, designed for beginners. The o
 
 ## Walkthrough
 
-### Step 1: Identify the IP of the Machine
+### Step 1: Identify the IP of the Machine & Network Scan
 To identify the IP of the machine, we use netdiscover with the following command:
 ```
 netdiscover -r 192.168.0.0/16
@@ -19,7 +19,11 @@ In my case, the IP is "192.168.141.132". Please note that the IP may be differen
 
 ![netdiscover](Img/1_Netdiscover.png)
 
-Now, run a nmap scan with the command: `nmap -A -v -O -T4 192.168.141.132`. The result for this nmap scan is:
+Now, run a nmap scan with the command: 
+```
+nmap -A -v -O -T4 192.168.141.132
+```
+The result for this nmap scan is:
 
 ```
 PORT   STATE SERVICE VERSION
@@ -49,30 +53,42 @@ By visiting the upload button, it opens a page where we can upload a PNG file.
 - By visiting the `/uploads/` directory, we can see that the PNG file has been uploaded.
   ![Uploaded file](Img/3_Uploaded%20file.png)
 
-On the first page, we saw a language button, and the page has the title of `LFI (Local File Inclusion)`. In LFI vulnerability, we can show internal files by giving commands in the URL. To view the "passwd" file of the server, visit the URL `192.168.141.132/language.php?lang=../../../../../../etc/passwd`.
+On the first page, we saw a language button, and the page has the title of `LFI (Local File Inclusion)`. 
+- In LFI vulnerability, we can show internal files by giving commands in the URL.
+- To view the "passwd" file of the server, visit the URL `192.168.141.132/language.php?lang=../../../../../../etc/passwd`.
 
 ![LFI vulnerability](Img/4_Passwd%20file.png)
 
 ### Step 4: Gaining Shell Access
-To execute the PHP reverse shell, visit the uploaded PNG file. Run Netcat on port `1234` by typing `nc -nlvp 1234` in the terminal. Visit the URL `192.168.141.132/language.php?lang=../../../../../../var/www/html/uploads/image.php.png`. By doing this, we get the shell.
+To execute the PHP reverse shell, visit the uploaded PNG file. 
+- Run Netcat on port `1234` by typing `nc -nlvp 1234` in the terminal.
+- Visit the URL `192.168.141.132/language.php?lang=../../../../../../var/www/html/uploads/image.php.png`.
+- By doing this, we get the shell.
 
 ![shell](Img/5_Shell%20access.png)
 
 ### Step 5: Finding the User Flag
-In the directory `/var/www/html/`, we found one directory named `supersecret-for-aziz` and a file named `bassam-pass.txt`. This file contains the password of "bassam". By reading that file, we get the password of Bassam, which is `Password123!@#`.
+- In the directory `/var/www/html/`, we found one directory named `supersecret-for-aziz` and a file named `bassam-pass.txt`.
+- This file contains the password of "bassam".
+- By reading that file, we get the password of Bassam, which is `Password123!@#`.
 
 ![Bassam password](Img/6_Bassam%20password.png)
 
 ### Step 6: Gaining Root Access
-To login into user bassam's account, use the command `su bassam`. But it shows that `su` is only run on the terminal. 
+To login into user bassam's account, use the command `su bassam`. 
+- But it shows that `su` is only run on the terminal. 
 
 ![Su error](Img/7_Su%20error.png)
 
-To grab the terminal, use the python command: `python3 -c 'import pty; pty.spawn("/bin/sh")'`. Now, we can get into Bassam's account.
+To grab the terminal, use the python command: 
+```
+python3 -c 'import pty; pty.spawn("/bin/sh")'
+```
+Now, we can get into Bassam's account.
 
 ![Bassam's terminal](Img/8_Bassam's%20terminal.png)
 
-In the user's directory, I found the `user.txt` file, and inside it, there is the flag:
+In the user's home directory, I found the `user.txt` file, and inside it there is the flag:
 ```
 THM{Bassam-Is-Better_Than-KIRA}
 ```
