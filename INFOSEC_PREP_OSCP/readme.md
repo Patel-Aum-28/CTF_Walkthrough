@@ -177,7 +177,7 @@ cat flag.txt
 
 ![Flag](Img/12_Root_Flag.png)
 
-The `flag.txt` contains the second flag: 
+The `flag.txt` contains the flag: 
 
 ```
 d73b04b0e696b0945283defa3eee4538
