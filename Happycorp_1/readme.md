@@ -229,11 +229,6 @@ hashed_password = generate_password_hash(password, custom_salt)
 print("Hashed password:", hashed_password)
 ```
 
-- Also you can download this file directly in your machine using:
-```bash
-git clone 
-```
-
 - Modify password and custom_salt of your choice.
 
 ![Python script](Img/21_python_script_for_hash.png)
