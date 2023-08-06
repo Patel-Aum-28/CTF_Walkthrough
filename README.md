@@ -20,8 +20,7 @@ This repository serves as a collection of CTF machine walkthroughs that I have w
 
 Below is a list of the CTF machines that are covered in this repository:
 
-- [BASIC PENTESTING: 1](Basic_pentesting_1/readme.md)
-- [Kira: CTF](Kira_CTF/readme.md)
-- [INFOSEC PREP: OSCP](INFOSEC_PREP_OSCP/readme.md)
-
-
+- [BASIC PENTESTING: 1](Basic_pentesting_1/)
+- [Kira: CTF](Kira_CTF/)
+- [INFOSEC PREP: OSCP](INFOSEC_PREP_OSCP/)
+- [Happycorp_1](Happycorp_1/)
