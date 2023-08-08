@@ -240,7 +240,7 @@ print("Hashed password:", hashed_password)
 - Add this hash with root permission in your passwd file as shown in picture. Add this line at last of file for root permission:
 
 ```bash 
-salt:hash:0:0root:/root:/bin/bash
+User_salt:Generated_hash:0:0:root:/root:/bin/bash
 ```
 
 ![Add Hash](Img/23_add_hash_in_passwd.png)
