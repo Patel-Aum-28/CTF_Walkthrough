@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to the walkthrough of the CTF machine `EMPIRE: LUPINONE.` This CTF machine offers an exciting journey of discovery and exploitation. The machine's difficulty is medium, making it an engaging challenge for both beginners and those looking to test their skills. In this walkthrough, I'll guide you through the steps to conquer this challenge and locate both the user and root flags.
+Welcome to the walkthrough of the CTF machine `EMPIRE: LUPINONE`. This CTF machine offers an exciting journey of discovery and exploitation. The machine's difficulty is medium, making it an engaging challenge for both beginners and those looking to test their skills. In this walkthrough, I'll guide you through the steps to conquer this challenge and locate both the user and root flags.
 
 
 ### Difficulty: Medium
@@ -120,9 +120,9 @@ The founded file has the hash code. The hash in `.mysecret.txt` seems like encod
 
 - Further investigation reveals that the hash is encoded in base58. 
 
-- So i write a Python script that use to decode the hash which are available on the [script](script/decode.py) directory or you can simply type this command to download that script:
+- So i write a Python script that use to decode the hash which are available on the [script](Script/decode.py) directory or you can simply type this command to download that script:
 ```bash
-wget 
+wget https://raw.githubusercontent.com/Patel-Aum-28/CTF_Walkthrough/main/Empire_Lupinone/Script/decode.py
 ```
 Save the hash in a file named `hash.txt`.
 ![Save file](Img/7_Save_file.png)
