@@ -24,3 +24,4 @@ Below is a list of the CTF machines that are covered in this repository:
 - [Kira: CTF](Kira_CTF/)
 - [INFOSEC PREP: OSCP](INFOSEC_PREP_OSCP/)
 - [Happycorp_1](Happycorp_1/)
+- [EMPIRE: LUPINONE](Empire_Lupinone/)
