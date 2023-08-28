@@ -1,5 +1,5 @@
 # CTF_Walkthrough
-This are some walkthrogh of CTF machines that i solved and are available on the Internet.
+This are some walkthroghs of CTF machines that i solved and are available on the Internet.
 
 # CTF Machine Walkthrough
 
